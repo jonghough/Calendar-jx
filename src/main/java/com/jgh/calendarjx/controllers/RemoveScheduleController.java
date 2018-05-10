@@ -15,24 +15,23 @@ public class RemoveScheduleController {
 
     private ItemService mItemService;
 
-    public RemoveScheduleController(ItemService itemService){
+    public RemoveScheduleController(ItemService itemService) {
         mItemService = itemService;
     }
 
     @RequestMapping(value = "/remove", method = RequestMethod.DELETE)
     public String deleteItem(@RequestBody Map<String, Object> inputData) {
-        int id = Integer.valueOf((String) inputData.get("id"));
         boolean success = true;
         try {
+            int id = Integer.valueOf(String.valueOf(inputData.get("id")));
             mItemService.deleteItem(id);
-        }catch(Exception e){
-            success=false;
+        } catch (Exception e) {
+            success = false;
         }
-        if(success)
+        if (success)
             return "success";
         else return "error";
     }
-
 
 
 }
