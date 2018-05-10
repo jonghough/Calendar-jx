@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jonghough/Calendar-jx.svg?branch=master)](https://travis-ci.org/jonghough/Calendar-jx)
 # Calendar-JX
 
 Single-user local Calendar Schedule App
